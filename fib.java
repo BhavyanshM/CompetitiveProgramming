@@ -1,9 +1,6 @@
+import java.util.Scanner;
 
-
-import java.math.BigInteger;
-import java.util.*;
-
-	public class fib{
+public class fib{
 
 		public static void main(String[] args)
 		{

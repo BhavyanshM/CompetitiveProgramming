@@ -6,7 +6,7 @@
  * */
 import java.util.*;
 
-class fast_Dijkstra's_Alg{
+class fast_Dijkstra_Alg{
 	static Node[] G;
 	static int M;
 
@@ -63,9 +63,9 @@ class fast_Dijkstra's_Alg{
 		int[] from = new int[n];
 		Arrays.fill(from, 0);
 
-		int ret = Integer.MAX_VALUE;
+//		int ret = Integer.MAX_VALUE;
 
-		boolean ada = false;
+//		boolean ada = false;
 
 		while (!pq.isEmpty()){
 //			System.out.println(Arrays.toString(tdis));
@@ -127,5 +127,6 @@ class fast_Dijkstra's_Alg{
 
 			}
 		}
+		scan.close();
 	}
 }

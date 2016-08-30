@@ -59,7 +59,7 @@ class TopologicalSort_Alg{
 
 		for(Edge e : G[n].adj)
 		{
-			dfs(e.to);
+			TSdfs(e.to);
 		}
 
 	}
@@ -82,6 +82,7 @@ class TopologicalSort_Alg{
 		}
 //		The main function call goes here
 
+		scan.close();
 	}
 
 }

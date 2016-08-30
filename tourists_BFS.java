@@ -103,5 +103,6 @@ class tourists_BFS{
 
 		sumPath(1);
 		System.out.println(pathCost);
+		scan.close();
 	}
 }

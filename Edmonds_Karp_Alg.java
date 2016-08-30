@@ -7,7 +7,7 @@
 
 import java.util.*;
 
-class Edmonds_Karp's_Alg{
+class Edmonds_Karp_Alg{
 	static Node[] G;
 	static int N;
 	static Queue<Integer> q;
@@ -189,6 +189,7 @@ class Edmonds_Karp's_Alg{
 			}
 
 			System.out.println("\n" + edK(G[0],G[6]));
+			scan.close();
 		}
 	}
 

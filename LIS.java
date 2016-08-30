@@ -2,7 +2,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-class LIS{
+class LongestIncreasingSequence{
 	static Scanner scan ;
 	static int[] O ;
 	static int n;

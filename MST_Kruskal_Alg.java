@@ -147,7 +147,7 @@ class MST_Kruskal_Alg{
 //			System.out.println(N);
 			makeGraph(N);
 
-			int temp = -2;
+//			int temp = -2;
 			while((u = scan.nextInt()) !=-1){
 
 				 v = scan.nextInt();
@@ -167,7 +167,7 @@ class MST_Kruskal_Alg{
 //			}
 //			System.out.println(s);
 
-//			scan.close();
 		}
+		scan.close();
 	}
 }

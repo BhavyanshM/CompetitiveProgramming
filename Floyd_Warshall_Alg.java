@@ -78,6 +78,7 @@ class Floyd_Warshall_Alg{
 			System.out.println();
 
 		}
+		scan.close();
 	}
 
 }

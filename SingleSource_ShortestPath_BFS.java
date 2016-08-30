@@ -113,7 +113,7 @@ class SingleSource_ShortestPath_BFS{
 //			}
 //			System.out.println(s);
 
-//			scan.close();
 		}
+		scan.close();
 	}
 }

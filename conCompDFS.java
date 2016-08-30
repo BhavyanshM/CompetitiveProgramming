@@ -1,6 +1,4 @@
 
-
-
 /*	DFS Depth Fist Search to find Connected Components of a graph
 * To find a flood fill count in a graph or even just traverse it for various reasons
 * */
@@ -86,7 +84,7 @@ class conCompDFS{
 		int u = -1;
 		int v = -1;
 //		String t = scan.nextLine();
-		String q = scan.nextLine();
+//		String q = scan.nextLine();
 
 		String temp = "String";
 		for(int k =1; k<K; k++){
@@ -122,7 +120,7 @@ class conCompDFS{
 //			}
 //			System.out.println(s);
 
-//			scan.close();
+			scan.close();
 		}
 	}
 }

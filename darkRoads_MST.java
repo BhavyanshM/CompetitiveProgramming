@@ -151,5 +151,6 @@ class darkRoads_MST{
 				DisjointSet ds = new DisjointSet();
 				System.out.println(total - MSTkruskal(ds));
 			}
+			scan.close();
 	}
 }

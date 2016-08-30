@@ -136,5 +136,6 @@ class shippingRoutes_SSSP_BFS{
 
 		}
 		System.out.println("END OF OUTPUT");
+		scan.close();
 	}
 }

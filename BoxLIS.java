@@ -20,7 +20,7 @@ public class BoxLIS {
 					}
 			}
 		LIS l = new LIS(B);
-
+		scan.close();
 		}
 
 
