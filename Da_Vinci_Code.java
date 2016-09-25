@@ -1,3 +1,8 @@
+/*UVa Online Judge Problem 11385 - Da Vinci Code (Accepted)
+ * Used Fibonacci function to generate first 93 Fibonacci numbers in a long[]
+ * Runtime Error - int[] used instead of long[]
+ * Runtime Error - Do not assume anything at all
+*/
 import java.util.*;
 
 class Da_Vinci_Code{
@@ -82,5 +87,4 @@ class Da_Vinci_Code{
 			return fibo;
 		}
 }
-
 
