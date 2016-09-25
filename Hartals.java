@@ -5,7 +5,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Main{
+class Hartals{
 	static Scanner scan = new Scanner(System.in);
 //	static int party[];
 	static int loss[];
