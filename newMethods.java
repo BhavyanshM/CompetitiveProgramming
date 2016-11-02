@@ -2,6 +2,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class Method {
+	static int x,y,d;
 	//Returns the factorial of the number given (n)
 	static int fac(int n)
 	{
@@ -160,6 +161,15 @@ public class Method {
 		//Finds the Least Common Multiple of two numbers, uses gcd(a,b) statically
 		static long lcm(long a, long b){
 			return a*b/gcd(a,b);
+		}
+// store x, y, and d as global variables
+		static void extendedEuclid(int a, int b){
+			if(b == 0){x = 1; y = 0; d = a; return;}
+			extendedEuclid(b, a%b);
+			int x1 = y;
+			int y1 = x - (a/b)*y;
+			x = x1;
+			y = y1;
 		}
 
 		//Good Seive of Eratosthenes
