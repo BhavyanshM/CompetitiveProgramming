@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Method {
 	//Returns the factorial of the number given (n)
-	public int fac(int n)
+	static int fac(int n)
 	{
 		if(n==0)return 1;
 		if(n==1)return 1;
@@ -11,7 +11,7 @@ public class Method {
 	}
 
 	//Returns the bumber n-choose-k for given n and k
-	public long choose(int n, int k)
+	static long choose(int n, int k)
 	{
 		long temp = 1;
 		if(n<k)temp=0;
@@ -27,19 +27,19 @@ public class Method {
 	}
 
 	//Returns the sum of first n squares
-	public long sq(int n)
+	static long sq(int n)
 	{
 		return n*(n+1)*(2*n+1)/6;
 	}
 
 	//Returns the sum of first n cubes
-	public long cu(int n)
+	static long cu(int n)
 	{
 		return n*(n+1)*(n+1)*n/4;
 	}
 
 	//Returns the nth Fibonacci Sequence term
-	public long fib(long n)
+	static long fib(long n)
 	{
 		long[] fib = new long[(int)n+1];
 		long fibo;
@@ -55,7 +55,7 @@ public class Method {
 		return fibo;
 	}
 
-	public long nfib(long s)
+	static long nfib(long s)
 	{
 		double phi = (1.0+Math.sqrt(5))/2;
 		double _phi = (1.0-Math.sqrt(5))/2;
@@ -66,7 +66,7 @@ public class Method {
 	}
 
 	//The Seive of Eratosthenes (Number of Primes less than n)
-	public long seiveN(int n)
+	static long seiveN(int n)
 	{
 		long tot = 0;
 		long[] temp = new long[n+1];
@@ -95,7 +95,7 @@ public class Method {
 	}
 
 	//The Seive of Eratosthenes (List of All the primes)
-		public long[] seiveP(int n){
+		static long[] seiveP(int n){
 //			long tot = 0;
 			long[] temp = new long[n+1];
 			long[] P = new long[n+1];
@@ -123,7 +123,7 @@ public class Method {
 			return P;
 		}
 
-		public BigInteger palinBig(String s)
+		static BigInteger palinBig(String s)
 		{
 			StringBuilder sb = new StringBuilder(2*s.length());
 			sb.append(s);
@@ -135,7 +135,7 @@ public class Method {
 			return new BigInteger(sb.toString());
 		}
 
-		public int palin(int n)
+		static int palin(int n)
 		{
 			Integer t = new Integer(n);
 			int length = (int)Math.log10(n);
@@ -151,16 +151,18 @@ public class Method {
 			return Integer.parseInt(sb.toString());
 		}
 		// Finds the Greatest Common Divisor of two numbers : Very Useful
-		public long gcd(long a, long b)
+		static long gcd(long a, long b)
 		{
 			long in = Math.min(a, b);
 			long ax = Math.max(a, b);
 			return in==0 ? ax : gcd(in, ax%in);
 		}
-		
+		//Finds the Least Common Multiple of two numbers, uses gcd(a,b) statically
+		static long lcm(long a, long b){
+			return a*b/gcd(a,b);
+		}
 
 		//Good Seive of Eratosthenes
-		//The Seive of Eratosthenes (List of All the primes)
 		//The Seive of Eratosthenes (List of All the primes)
 		static Long[] seiveE(int n){
 //			long tot = 0;
