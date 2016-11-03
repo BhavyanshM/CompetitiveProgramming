@@ -20,17 +20,13 @@ class SingleSource_ShortestPath_BFS{
 		int n;
 		public boolean visited;
 		int layer;
-
 		public Node(int N){
 			adj = new ArrayList<Edge>();
 			n=N;
 			layer = -1;
 			visited = false;
 		}
-
-
 	}
-
 	static class Edge{
 		int to, weight;
 		public Edge(int t, int w){
@@ -38,14 +34,12 @@ class SingleSource_ShortestPath_BFS{
 			weight = w;
 		}
 	}
-
 	public static void makeGraph(int n){
 	G = new Node[n];
 		for(int i =0; i<n; i++){
 			G[i]=new Node(i);
 		}
 	}
-
 	public static void addEdge(int u,int v, int w){
 		G[u].adj.add(new Edge(v,w));
 		G[v].adj.add(new Edge(u,w));
@@ -74,22 +68,18 @@ class SingleSource_ShortestPath_BFS{
 		System.out.print(node.layer+" ");
 		return G[t].layer;
 	}
-
-
 	public static void main(String[] args){
 		Scanner scan = new Scanner(System.in);
 
 		int K = Integer.parseInt(scan.nextLine());
 		int u = -1;
 		int v = -1;
-
 		String temp = "String";
 		for(int k =0; k<K; k++){
 			temp = scan.nextLine();
 			N = charN(temp.charAt(0))-65+1;
 			System.out.println(N);
 			makeGraph(N);
-
 			while((temp = scan.nextLine())!=null){
 				if(temp.isEmpty()){
 					break;
@@ -97,22 +87,9 @@ class SingleSource_ShortestPath_BFS{
 
 				 u = charN(temp.charAt(0))-65;
 				 v = charN(temp.charAt(1))-65;
-//							System.out.println(u);
-//							System.out.println(v);
-
 				 addEdge(u,v,1);
-
-//				System.out.println(k);
 			}
-//			System.out.println(bfs(0, 5));
 			bfs(0, 5);
-
-
-//			for(int z =0; z<N; z++){
-//				System.out.println(G[z].adj.size());
-//			}
-//			System.out.println(s);
-
 		}
 		scan.close();
 	}

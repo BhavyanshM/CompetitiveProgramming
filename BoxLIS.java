@@ -85,7 +85,6 @@ class LIS{
 					this.from[a]=b;
 				}
 				System.out.println(Arrays.toString(LIS));
-//				System.out.println(Arrays.toString(from));
 			}
 		}
 	}

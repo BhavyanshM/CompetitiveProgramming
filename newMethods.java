@@ -1,7 +1,7 @@
 import java.math.BigInteger;
 import java.util.ArrayList;
 
-public class Method {
+public class newMethods {
 	static int x,y,d;
 	//Returns the factorial of the number given (n)
 	static int fac(int n)
@@ -55,15 +55,12 @@ public class Method {
 		fib[(int)n] = fibo;
 		return fibo;
 	}
-
 	static long nfib(long s)
 	{
 		double phi = (1.0+Math.sqrt(5))/2;
 		double _phi = (1.0-Math.sqrt(5))/2;
 		double n = (double)s+1;
-//		System.out.println(n);
 		return (long)((Math.pow(phi, n)-Math.pow(_phi, n))/Math.sqrt(5));
-
 	}
 
 	//The Seive of Eratosthenes (Number of Primes less than n)
@@ -97,10 +94,8 @@ public class Method {
 
 	//The Seive of Eratosthenes (List of All the primes)
 		static long[] seiveP(int n){
-//			long tot = 0;
 			long[] temp = new long[n+1];
 			long[] P = new long[n+1];
-			//mark all the numbers as prime
 			for (int x = 0; x<n+1; x++){
 				temp[x] = x;
 			}
@@ -108,17 +103,14 @@ public class Method {
 			for (int i = 2; i<n+1; i++){
 				if(temp[i]!=0){
 					for(int j = 2; j*i<n+1; j++){
-//						System.out.println(temp[j*i]);
 						temp[j*i]=0;
 					}
 				}
 			}
+			//Unneccesary but returns the final array eliminating zeroes
 			for (int i= 2 ; i<n+1; i++){
-//				System.out.print(temp[i] + " ");
 				if(temp[i]!=0){
-//					tot+=1;
 					P[i]=temp[i];
-//					System.out.print(temp[i] + " ");
 				}
 			}
 			return P;
@@ -162,7 +154,7 @@ public class Method {
 		static long lcm(long a, long b){
 			return a*b/gcd(a,b);
 		}
-// store x, y, and d as global variables
+		// store x, y, and d as global variables
 		static void extendedEuclid(int a, int b){
 			if(b == 0){x = 1; y = 0; d = a; return;}
 			extendedEuclid(b, a%b);
@@ -204,7 +196,4 @@ public class Method {
 			Long Primes[] = P.toArray(new Long[P.size()]);
 			return Primes;
 		}
-
-
-
 }

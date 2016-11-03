@@ -1,5 +1,3 @@
-
-
 /* Floyd-Warshall Algorithm to find the shortest paths in weighted-directed graphs
  * n-cubed algorithm
  * Also use for Single Source Shortest Path problems when n<100
@@ -24,20 +22,14 @@ class Floyd_Warshall_Alg{
 	public static void allPairsFW(int n){
 		for(int k = 0; k<n; k++){
 			for(int i = 0; i<n; i++){
-				for(int j = 0; j<n; j++)
-//				{
+				for(int j = 0; j<n; j++){
 					if(AdjMat[i][k]!=Integer.MAX_VALUE && AdjMat[k][j]!=Integer.MAX_VALUE){
-
 						if(AdjMat[i][j]> AdjMat[i][k] + AdjMat[k][j]){
-//							System.out.println(i + " " + j + " " + k);
-//							printArr2D(paths);
-						paths[i][j] = paths[k][j];
+							paths[i][j] = paths[k][j];
 						}
 						AdjMat[i][j] = Math.min(AdjMat[i][j], AdjMat[i][k] + AdjMat[k][j]);
-//						printArr2D(AdjMat);
-//						System.out.println();
 					}
-//				}
+				}
 			}
 		}
 	}
@@ -68,15 +60,11 @@ class Floyd_Warshall_Alg{
 				AdjMat[r][c] = scan.nextInt();
 				paths[r][c] = r;
 			}
-//			printArr2D(paths);
-//			System.out.println();
-
 			allPairsFW(V);
 			printArr2D(AdjMat);
 			System.out.println();
 			printArr2D(paths);
 			System.out.println();
-
 		}
 		scan.close();
 	}

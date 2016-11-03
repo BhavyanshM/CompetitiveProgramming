@@ -31,16 +31,13 @@ class LongestIncreasingSequence{
 	static void lis(){
 
 		Arrays.fill(LIS, 1);
-//		Arrays.fill(from, -1);
 		for(int a =0; a<A.length; a++){
 			for(int b = 0; b<a ; b++){
 				if(isGood(A[b],A[a]) && LIS[a]<LIS[b]+1)
 				{
 					LIS[a]=LIS[b]+1;
-//					this.from[a]=b;
 				}
 				System.out.println(Arrays.toString(LIS));
-//				System.out.println(Arrays.toString(from));
 			}
 		}
 	}
@@ -51,13 +48,10 @@ class LongestIncreasingSequence{
 		O = new int[n];
 		A = new int[n];
 		LIS = new int[n];
-
 		for(int i = 0; i<n; i++)
 		{
 			O[i] = scan.nextInt();
 		}
-
-
 		while(scan.hasNext()){
 			Arrays.fill(A, -1);
 			for(int i = 0; i<n; i++)
@@ -69,9 +63,7 @@ class LongestIncreasingSequence{
 		}
 	}
 
-	static int maxLIST(int[] LIST)
-	{
-
+	static int maxLIST(int[] LIST){
 	int maxLIS;
 	int maxIndex = 0;
 	maxLIS = LIST[0];

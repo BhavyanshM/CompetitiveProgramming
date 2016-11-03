@@ -1,5 +1,3 @@
-
-
 /*TOURISTS Uses BFS to find the layers of the graph multiple times on nodes according to
  * the rule and sums them up recursively to find the total sum of lengths of paths for
  * the tourists --  sumPath(int i);
@@ -17,15 +15,11 @@ class tourists_BFS{
 	static class Node {
 		List<Edge> adj;
 		int n;
-
 		public Node(int N){
 			adj = new ArrayList<Edge>();
 			n=N;
 		}
-
-
 	}
-
 	static class Edge{
 		int to, weight;
 		public Edge(int t, int w){
@@ -33,7 +27,6 @@ class tourists_BFS{
 			weight = w;
 		}
 	}
-
 	public static void makeGraph(int n){
 	G = new Node[n];
 		for(int i =0; i<n; i++){
@@ -42,7 +35,6 @@ class tourists_BFS{
 		layer = new int[G.length];
 		visited = new boolean[G.length];
 	}
-
 	public static void addEdge(int u,int v, int w){
 		G[u].adj.add(new Edge(v,w));
 		G[v].adj.add(new Edge(u,w));
@@ -75,23 +67,16 @@ class tourists_BFS{
 			bfs(i-1);
 			for(int j =2; i*j<N+1; j++){
 				pathCost+=layer[i*j-1]+1;
-//				System.out.println((layer[i*j-1]+1) +" "+ (i)+" "+(i*j));
-//				System.out.println(Arrays.toString(layer));
 			}
-
 		}
 	}
 
 	public static void main(String[] args){
 		Scanner scan = new Scanner(System.in);
-
-
 		N = scan.nextInt();
 		makeGraph(N);
-
 		int u = -1;
 		int v = -1;
-
 		for(int k =0; k<N-1; k++){
 
 				 u = scan.nextInt();
@@ -99,8 +84,6 @@ class tourists_BFS{
 
 				 addEdge(u-1,v-1,1);
 		}
-//		System.out.println(N);
-
 		sumPath(1);
 		System.out.println(pathCost);
 		scan.close();

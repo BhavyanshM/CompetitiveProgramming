@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+public class GCD_LCM {
 	static int gcd(int a, int b)
 	{
 		int in = Math.min(a, b);
@@ -32,6 +32,7 @@ public class Solution {
             	}
             }
         System.out.println(count);
+        scan.close();
 //        }catch(Exception e){}
     }
 }
