@@ -1,4 +1,3 @@
-
 /*
  * Package java.util
  * Class Arrays
@@ -8,8 +7,7 @@
 
 import java.util.*;
 
-
-public class Main {
+public class Array {
 	
 	public static void main(String[] args){
 		int[] intArray = {1,2,3,40,5};

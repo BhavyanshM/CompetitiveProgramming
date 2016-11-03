@@ -1,4 +1,3 @@
-
 /*
  * Package java.util
  * Class Arrays
@@ -7,7 +6,6 @@
 */
 
 import java.util.*;
-
 
 public class Collection {
 	
@@ -101,12 +99,6 @@ public class Collection {
 		//Using the swap() method from the Collecitons class
 		Collections.swap(intList, 0, intList.size()-1);
 		System.out.println("Swapped 0<->length intList: "+intList);
-
-		
-		
-		
-		
-		
 	}
 
 }

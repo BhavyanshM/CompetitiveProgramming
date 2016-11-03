@@ -18,7 +18,6 @@ class shippingRoutes_SSSP_BFS{
 		int n;
 		public boolean visited;
 		int layer;
-
 		public Node(int N){
 			adj = new ArrayList<Edge>();
 			n=N;
@@ -26,10 +25,7 @@ class shippingRoutes_SSSP_BFS{
 			visited = false;
 			name = null;
 		}
-
-
 	}
-
 	static class Edge{
 		int to, weight;
 		public Edge(int t, int w){
@@ -37,14 +33,12 @@ class shippingRoutes_SSSP_BFS{
 			weight = w;
 		}
 	}
-
 	public static void makeGraph(int n){
 	G = new Node[n];
 		for(int i =0; i<n; i++){
 			G[i]=new Node(i);
 		}
 	}
-
 	public static void addEdge(int u,int v, int w){
 		G[u].adj.add(new Edge(v,w));
 		G[v].adj.add(new Edge(u,w));

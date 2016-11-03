@@ -17,16 +17,13 @@ class MST_Kruskal_Alg{
 	static List<Edge> MST = new LinkedList<Edge>();
 
 	static class DisjointSet{
-
 		int[] pset;
-
 		public DisjointSet(){
 			pset = new int[G.length];
 			for(int i = 0; i<pset.length; i++){
 				pset[i] = i;
 			}
 		}
-
 		public  int findSet(int i){
 			return pset[i]==i ? pset[i] : (pset[i] = findSet(pset[i]));
 		}
@@ -36,53 +33,41 @@ class MST_Kruskal_Alg{
 		public  boolean isSameSet(int i, int j){
 			return (findSet(i)==findSet(j));
 		}
-
 	}
-
 	static class Node {
 		List<Edge> adj;
 		int n;
 		public boolean visited;
 		int layer;
-
 		public Node(int N){
 			adj = new ArrayList<Edge>();
 			n=N;
 			layer = -1;
 			visited = false;
 		}
-
-
 	}
-
 	static class Edge implements Comparable<Edge> {
 		int to, weight, from;
-
 		public Edge(int t, int w){
 			to=t;
 			weight = w;
 		}
-
 		public Edge(int f, int t, int w){
 			to=t;
 			weight = w;
 			from = f;
 		}
-
 		@Override
 		public int compareTo(Edge e) {
 			return this.weight - e.weight;
 		}
 	}
-
 	public static void makeGraph(int n){
 		G = new Node[n];
 		for(int i =0; i<n; i++){
 			G[i]=new Node(i);
 		}
 	}
-
-
 	public static void addEdge(int u,int v, int w){
 		G[u].adj.add(new Edge(u,v,w));
 		E.add(new Edge(u,v,w));
@@ -109,21 +94,16 @@ class MST_Kruskal_Alg{
 		return cost;
 	}
 	public static void dfs(int n){
-
 		if(G[n].visited){
 			return;
 		}
-
 		G[n].visited = true;
 		s.push(n);
-
 		cnt++;
-
 		for(Edge e : G[n].adj)
 		{
 			dfs(e.to);
 		}
-
 	}
 	public static int conComp(Node[] g){
 			for(int i = 0; i<g.length;i++){
@@ -144,28 +124,16 @@ class MST_Kruskal_Alg{
 
 		for(int k =0; k<K; k++){
 			N = scan.nextInt();
-//			System.out.println(N);
 			makeGraph(N);
-
-//			int temp = -2;
 			while((u = scan.nextInt()) !=-1){
 
 				 v = scan.nextInt();
 				 w = scan.nextInt();
-//							System.out.println(u);
-//							System.out.println(v);
 				 addEdge(u,v,w);
 
-//				System.out.println(k);
 			}
-//			System.out.println(bfs(0, 5));
 			DisjointSet ds = new DisjointSet();
 			System.out.println(MSTkruskal(ds));
-
-//			for(int z =0; z<N; z++){
-//				System.out.println(G[z].adj.size());
-//			}
-//			System.out.println(s);
 
 		}
 		scan.close();
